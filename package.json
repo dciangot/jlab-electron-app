@@ -1,0 +1,55 @@
+{
+  "name": "jlab-electron-app",
+  "version": "1.0.0",
+  "description": "jlab electron app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "app:dir": "electron-builder --dir",
+    "app:dist": "electron-builder"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dciangot/jlab-electron-app.git"
+  },
+  "author": "D. Ciangottini",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dciangot/jlab-electron-app/issues"
+  },
+  "homepage": "https://github.com/dciangot/jlab-electron-app#readme",
+  "devDependencies": {
+    "electron": "^18.2.0",
+    "electron-builder": "^23.0.3"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "jlab_electron_app"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
+}
