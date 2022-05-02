@@ -1,10 +1,11 @@
 {
   "name": "jlab-electron-app",
-  "version": "v0.0.10",
+  "version": "0.0.11",
   "description": "jlab electron app",
   "main": "main.js",
   "scripts": {
     "start": "electron-forge start",
+    "release": "electron-builder",
     "app:dir": "electron-builder --dir",
     "app:dist": "electron-builder"
   },
