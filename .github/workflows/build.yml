@@ -31,5 +31,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
         with:
-          asset_paths: '["./dist/jlab-electron-app-1.0.0.AppImage", "./dist/jlab-electron-app-Setup-1.0.0.exe", "./dist/jlab-electron-app_1.0.0_amd64.snap", "./dist/jlab-electron-app-1.0.0.dmg"]'
+          asset_paths: '["./dist/jlab-electron-app-*.AppImage", "./dist/jlab-electron-app-Setup-*.exe", "./dist/jlab-electron-app_*.snap", "./dist/jlab-electron-app-*.dmg"]'
 
