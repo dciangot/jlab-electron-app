@@ -1,6 +1,6 @@
 name: Build/release
 
-on: push
+on: tag
 
 jobs:
   release:
@@ -18,17 +18,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 17 
+      - run: npm install
 
-      - name: Install Snapcraft
-        uses: samuelmeuli/action-snapcraft@v1
-
-      - name: Build/release Electron app
-        uses: samuelmeuli/action-electron-builder@v1
+      - name: Upload release binaries
+        uses: alexellis/upload-assets@0.2.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
         with:
-          # GitHub token, automatically provided to the action
-          # (No need to define this secret in the repo settings)
-          github_token: ${{ secrets.GITHUB_TOKEN }} 
+          asset_paths: '["./dist/jlab-electron-app-1.0.0.*"]'
 
-          # If the commit is tagged with a version (e.g. "v1.0.0"),
-          # release the app after building
-          release: ${{ startsWith(github.ref, 'refs/tags/v') }}
