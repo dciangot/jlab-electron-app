@@ -1,13 +1,18 @@
 {
   "name": "jlab-electron-app",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "jlab electron app",
   "main": "main.js",
   "scripts": {
-    "start": "electron-forge start",
     "release": "electron-builder",
     "app:dir": "electron-builder --dir",
     "app:dist": "electron-builder"
+  },
+  "build": {
+    "publish": {
+      "provider": "github",
+      "releaseType": "release"
+    }
   },
   "repository": {
     "type": "git",
