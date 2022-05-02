@@ -21,8 +21,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 17 
-    - name: Install Snapcraft
-      uses: samuelmeuli/action-snapcraft@v1
+      - name: Install Snapcraft
+        uses: samuelmeuli/action-snapcraft@v1
       - run: npm install
       - run: npm run app:dist
         env:
