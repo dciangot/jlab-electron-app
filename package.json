@@ -1,6 +1,6 @@
 {
   "name": "jlab-electron-app",
-  "version": "1.0.0",
+  "version": "v0.0.10",
   "description": "jlab electron app",
   "main": "main.js",
   "scripts": {

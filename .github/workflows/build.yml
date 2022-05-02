@@ -26,10 +26,9 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
 
-      - name: Upload release binaries
-        uses: alexellis/upload-assets@0.2.2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
-        with:
-          asset_paths: '["./dist/jlab-electron-app-*.AppImage", "./dist/jlab-electron-app-Setup-*.exe", "./dist/jlab-electron-app_*.snap", "./dist/jlab-electron-app-*.dmg"]'
-
+#      - name: Upload release binaries
+#        uses: alexellis/upload-assets@0.2.2
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
+#        with:
+#          asset_paths: '["./dist/jlab-electron-app-*.AppImage", "./dist/jlab-electron-app-Setup-*.exe", "./dist/jlab-electron-app_*.snap", "./dist/jlab-electron-app-*.dmg"]'
