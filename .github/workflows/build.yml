@@ -23,6 +23,8 @@ jobs:
           node-version: 17 
       - run: npm install
       - run: npm run app:dist
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
 
       - name: Upload release binaries
         uses: alexellis/upload-assets@0.2.2
