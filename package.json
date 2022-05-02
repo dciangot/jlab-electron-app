@@ -1,6 +1,6 @@
 {
   "name": "jlab-electron-app",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "jlab electron app",
   "main": "main.js",
   "scripts": {
@@ -10,7 +10,8 @@
   },
   "build": {
     "publish": {
-      "provider": "github"
+      "provider": "github",
+      "releaseType": "release"
     }
   },
   "repository": {
